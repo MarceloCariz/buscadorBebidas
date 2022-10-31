@@ -1,4 +1,5 @@
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
+import { Favoritos } from "./components/Favoritos";
 import { Formulario } from "./components/Formulario";
 import { ListadoBebidas } from "./components/ListadoBebidas";
 import { ModalBebida } from "./components/ModalBebida";
@@ -12,9 +13,15 @@ const App = () => {
         <header className="py-5">
           <h1>Buscador Bebidas</h1>
         </header>
+          <aside style={{display: 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'cente'}}>
+          
+          <Favoritos/>
+        </aside>
         <Container className="mt-5">
           <Formulario />
-          <ListadoBebidas/>
+            <ListadoBebidas/>
+
+
           <ModalBebida/>
         </Container>
       </CategoriasProvider>
